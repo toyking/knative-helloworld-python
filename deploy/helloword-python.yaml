@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
-  name: helloworld-python-v1
+  name: helloworld-python-v2
   namespace: default
 spec:
   runLatest:
@@ -19,11 +19,11 @@ spec:
             name: kaniko
             arguments:
               - name: IMAGE
-                value: docker.io/toyking/app-from-source-v1:latest
+                value: docker.io/toyking/app-from-source-v2:latest
       revisionTemplate:
         spec:
           container:
-            image: docker.io/toyking/app-from-source-v1:latest
+            image: docker.io/toyking/app-from-source-v2:latest
             env:
               - name: TARGET
-                value: "Python Sample v1"
+                value: "Python Sample v2"
