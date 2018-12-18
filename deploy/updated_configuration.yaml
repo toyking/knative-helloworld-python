@@ -25,7 +25,7 @@ spec:
       serviceAccountName: build-bot
       source:
         git:
-          url: https://github.com/toyking/knative-helloworld-python.git
+          url: https://github.com/toyking/knative-helloworld-python.git:latest
           revision: master
       template:
         name: kaniko
