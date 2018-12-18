@@ -27,4 +27,4 @@ spec:
             imagePullPolicy: Always
             env:
               - name: TARGET
-                value: "Python Sample v1"
+                value: "Python Sample v2"
