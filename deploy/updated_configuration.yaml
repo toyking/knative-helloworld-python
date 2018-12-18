@@ -20,6 +20,9 @@ metadata:
 spec:
   revisionTemplate:
     spec:
+      metadata:
+        labels:
+          knative.dev/type: container
       container:
         image: docker.io/toyking/app-from-source:latest
         imagePullPolicy: Always
