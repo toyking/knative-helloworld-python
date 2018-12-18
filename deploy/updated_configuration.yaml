@@ -41,5 +41,5 @@ spec:
           image: docker.io/toyking/app-from-source:latest
           imagePullPolicy: Always
           env:
-            - name: TARGET
+            - name: TARGET1
               value: "Python Sample v3"
