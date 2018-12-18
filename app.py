@@ -12,7 +12,7 @@ def hello_world():
     for i in range(10000):
         logger.info('hello world')
     target = os.environ.get('TARGET', 'World')
-    return 'Test {}!\n'.format(target)
+    return 'Test3 {}!\n'.format(target)
 
 
 if __name__ == "__main__":

@@ -40,7 +40,7 @@ spec:
 #          imagePullPolicy: Always
           env:
             - name: TARGET
-              value: "Python Sample v2"
+              value: "Python Sample v3"
           readinessProbe:
             httpGet:
               path: /
