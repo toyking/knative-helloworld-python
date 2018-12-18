@@ -32,11 +32,11 @@ spec:
         arguments:
           - name: IMAGE
             value: docker.io/toyking/app-from-source:latest
-  revisionTemplate:
-    spec:
-      container:
-        image: docker.io/toyking/app-from-source:latest
-        imagePullPolicy: Always
-        env:
-          - name: TARGET
-            value: "Python Sample v2"
+    revisionTemplate:
+      spec:
+        container:
+          image: docker.io/toyking/app-from-source:latest
+          imagePullPolicy: Always
+          env:
+            - name: TARGET
+              value: "Python Sample v3"
