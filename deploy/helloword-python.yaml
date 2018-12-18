@@ -19,11 +19,11 @@ spec:
             name: kaniko
             arguments:
               - name: IMAGE
-                value: docker.io/toyking/app-from-source:latest
+                value: docker.io/toyking/app-from-source-v1:latest
       revisionTemplate:
         spec:
           container:
-            image: docker.io/toyking/app-from-source:latest
+            image: docker.io/toyking/app-from-source-v1:latest
             env:
               - name: TARGET
-                value: "Python Sample v2"
+                value: "Python Sample v1"
