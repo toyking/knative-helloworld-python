@@ -36,12 +36,7 @@ spec:
     spec:
       container:
         image: docker.io/toyking/app-from-source:latest
-        #          imagePullPolicy: Always
+        imagePullPolicy: Always
         env:
           - name: TARGET
-            value: "Python Sample v3"
-        readinessProbe:
-          httpGet:
-            path: /
-          initialDelaySeconds: 3
-          periodSeconds: 3
+            value: "Python Sample v1"
