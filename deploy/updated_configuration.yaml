@@ -24,7 +24,7 @@ spec:
           labels:
             knative.dev/type: container
         container:
-          image: docker.io/toyking/knative-helloworld-python:v2
+          image: docker.io/toyking/knative-helloworld-python:v1
           env:
             - name: TARGET
-              value: "Python Sample v2"
+              value: "Python Sample v1"
