@@ -18,25 +18,14 @@ metadata:
   name: helloworld-python
   namespace: default
 spec:
-  build:
-    apiVersion: build.knative.dev/v1alpha1
-    kind: Build
+  revisionTemplate:
+    metadata:
+      labels:
+        knative.dev/type: container
     spec:
-      serviceAccountName: build-bot
-      source:
-        git:
-          url: https://github.com/toyking/knative-helloworld-python.git
-          revision: master
-      template:
-        name: kaniko
-        arguments:
-          - name: IMAGE
-            value: docker.io/toyking/app-from-source:latest
-    revisionTemplate:
-      spec:
-        container:
-          image: docker.io/toyking/app-from-source:latest
-          imagePullPolicy: Always
-          env:
-            - name: TARGET
-              value: "Python Sample v3"
+      container:
+        image: gcr.io/knative-samples/knative-route-demo:green # URL to the new version of the sample app docker image
+        imagePullPolicy: Always
+        env:
+          - name: T_VERSION
+            value: "green" # Updated value for the T_VERSION environment variable
