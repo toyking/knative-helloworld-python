@@ -18,20 +18,6 @@ metadata:
   name: helloworld-python
   namespace: default
 spec:
-  build:
-    apiVersion: build.knative.dev/v1alpha1
-    kind: Build
-    spec:
-      serviceAccountName: build-bot
-      source:
-        git:
-          url: https://github.com/toyking/knative-helloworld-python.git
-          revision: master
-      template:
-        name: kaniko
-        arguments:
-          - name: IMAGE
-            value: docker.io/toyking/app-from-source:latest
   revisionTemplate:
     spec:
       container:
