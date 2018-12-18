@@ -24,7 +24,6 @@ spec:
         spec:
           container:
             image: docker.io/toyking/app-from-source:latest
-            imagePullPolicy: Always
             env:
               - name: TARGET
                 value: "Python Sample v2"

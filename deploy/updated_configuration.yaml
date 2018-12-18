@@ -25,7 +25,6 @@ spec:
             knative.dev/type: container
         container:
           image: docker.io/toyking/app-from-source:latest
-          imagePullPolicy: Always
           env:
-            - name: TARGET1
+            - name: TARGET
               value: "Python Sample v3"
